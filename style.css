@@ -17,7 +17,6 @@ button {
 .button {
   border: none;
   outline: none;
-  background-color: #9c56bb;
 }
 
 .top-nav {
@@ -45,4 +44,14 @@ button {
   list-style: none;
   display: flex;
   justify-content: space-between;
+}
+
+.home-page:hover {
+  background-color: #999;
+}
+
+.btn_sign-in {
+  font-size: inherit;
+  height: 100%;
+  background-color: #9c56bb;
 }
