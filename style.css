@@ -1,3 +1,7 @@
+:root {
+    --purple: #9c56bb;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,5 +57,5 @@ button {
 .btn_sign-in {
   font-size: inherit;
   height: 100%;
-  background-color: #9c56bb;
+  background-color: var(--purple);
 }
