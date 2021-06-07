@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background-color: #9c56bb;
+}
+
+.top-nav {
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.padding-small {
+  padding: 4px 8px;
+}
+
+.padding-mid {
+  padding: 8px 16px;
+}
+
+.padding-large {
+  padding: 16px 32px;
+}
+
+.categories-bar {
+  width: 400px;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
