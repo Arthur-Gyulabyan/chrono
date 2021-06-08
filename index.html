@@ -12,20 +12,23 @@
   </head>
   <body>
     <nav class="top-nav">
-      <div class="home-page">
-        <a href="./index.html" class="home-page">
-          <img src="./img/logo.png" width="196" alt="Logo" />
-        </a>
-      </div>
+      <img src="./img/logo-white.png" width="196" alt="Logo" />
+
       <ul class="categories-bar">
-        <li class="padding-small">Brandes</li>
-        <li class="padding-small">Gallery</li>
-        <li class="padding-small">About</li>
+        <li class=""><a href="" class="top-nav__link padding-l current">Home</a></li>
+        <li class=""><a href="" class="top-nav__link padding-l">Brandes</a></li>
+        <li class="top-nav__clock">
+          <canvas id="canvas" width="60" height="60"></canvas>
+        </li>
+        <li class=""><a href="" class="top-nav__link padding-l">Gallery</a></li>
+        <li class=""><a href="" class="top-nav__link padding-l">About</a></li>
       </ul>
 
-      <div>
-        <button class="btn_sign-in padding-mid">Sign in</button>
-      </div>
+      <button class="btn_sign-in padding-l">Sign in</button>
     </nav>
+
+    <footer></footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
