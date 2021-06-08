@@ -1,0 +1,109 @@
+:root {
+  --dark-gray: #444;
+  --hover-grey: #908e8e;
+  --light-green: #62ec00;
+  --dark-green: #1a6a00;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.2;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-size: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.padding-s {
+  padding: 4px 8px;
+}
+
+.padding-m {
+  padding: 8px 16px;
+}
+
+.padding-l {
+  padding: 16px 32px;
+}
+
+.padding-xl {
+  padding: 1.5em 3em;
+}
+
+.top-nav {
+  width: 100%;
+  background: #222;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.top-nav__link a {
+  /*display: inline-block;*/
+}
+
+.top-nav__link {
+  color: #fff;
+
+  font-size: 1.5em;
+}
+
+.top-nav__link:hover {
+  background-color: var(--dark-gray);
+  color: #fff;
+  cursor: pointer;
+}
+
+.top-nav__clock {
+  margin: 0 1em;
+}
+
+.categories-bar {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link_home-page:hover {
+  background-color: var(--hover-grey);
+}
+
+.btn_sign-in {
+  width: 196px;
+  font-size: 1.5em;
+  background-color: inherit;
+  color: #ddd;
+}
+
+.btn_sign-in:hover {
+  background-color: var(--dark-green);
+  color: #fff;
+}
+
+.current {
+  border-bottom: 4px solid var(--light-green);
+  padding-bottom: 12px;
+}
