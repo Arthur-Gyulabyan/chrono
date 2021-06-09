@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/chrono-logo-white.png" type="image/x-icon" sizes="16x16" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Chrono</title>
+  </head>
+  <body>
+    <nav class="top-nav">
+      <img src="./img/logo-white.png" width="196" alt="Logo" />
+
+      <ul class="categories-bar">
+        <li class=""><a href="./index.html" class="top-nav__link padding-l">Home</a></li>
+        <li class=""><a href="./buy-page.html" class="top-nav__link padding-l">Buy Now</a></li>
+        <li class="top-nav__clock">
+          <canvas id="canvas" width="60" height="60"></canvas>
+        </li>
+        <li class=""><a href="" class="top-nav__link padding-l">Gallery</a></li>
+        <li class=""><a href="./about.html" class="top-nav__link padding-l current">About</a></li>
+      </ul>
+
+      <button class="btn_sign-in padding-l">Sign in</button>
+    </nav>
+
+    <main>
+      <div class="main-header__container">
+        <h1 class="main-header">
+          <i class="main-header__line-left"></i>
+          <span class="main-header__text">CONTACT</span>
+          <i class="main-header__line-right"></i>
+        </h1>
+      </div>
+
+      <div class="main-contact">
+        <div class="contact-icon">
+          <i class="fa fa-phone"></i>
+          <p class="contact-name">MAKE A CALL</p>
+          <p class="contact-paragraph">+374-77-77-77</p>
+        </div>
+        <div class="contact-icon">
+          <i class="fa fa-envelope"></i>
+          <p class="contact-name">SEND E-MAIL</p>
+          <p class="contact-paragraph">aaaa@gmail.com</p>
+        </div>
+        <div class="contact-icon">
+          <i class="fa fa-globe"></i>
+          <p class="contact-name">VISIT A BOUTIQUE</p>
+          <p class="contact-paragraph">Backer str. 221B</p>
+        </div>
+        <div class="contact-icon">
+          <i class="fa fa-plus-circle"></i>
+          <p class="contact-name">FOLLOW</p>
+          <div class="main-icon-parent">
+            <a class="main-icon" href="#"><i class="fa fa-facebook-official"></i></a>
+            <a class="main-icon" href="#"><i class="fa fa-instagram"></i></a>
+            <a class="main-icon" href="#"><i class="fa fa-snapchat"></i></a>
+            <a class="main-icon" href="#"><i class="fa fa-pinterest-p"></i></a>
+            <a class="main-icon" href="#"><i class="fa fa-twitter"></i></a>
+            <a class="main-icon" href="#"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">Copyright © 2021 Chronograph.</p>
+
+      <img src="./img/logo-white.png" width="196" alt="Logo" />
+      <div class="footer-icon__conteiner">
+        <p class="footer-icon__paragraf">FOLLOW CHRONOGRAPH ON:</p>
+
+        <div>
+          <a class="footer-icon" href="#"> <i class="fa fa-facebook-official"></i></a>
+          <a class="footer-icon" href="#"><i class="fa fa-instagram"></i></a>
+          <a class="footer-icon" href="#"><i class="fa fa-snapchat"></i></a>
+          <a class="footer-icon" href="#"><i class="fa fa-pinterest-p"></i></a>
+          <a class="footer-icon" href="#"><i class="fa fa-twitter"></i></a>
+          <a class="footer-icon" href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
