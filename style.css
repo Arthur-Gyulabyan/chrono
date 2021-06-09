@@ -170,3 +170,43 @@ a {
 main {
   margin-top: 7.5em;
 }
+
+.footer {
+  background-color: #111;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120px;
+}
+
+.footer__copyright {
+  color: var(--hover-grey);
+  width: 417px;
+  font-size: 12px;
+}
+
+.footer-icon__conteiner {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 417px;
+}
+
+.footer-icon__paragraf {
+  font-size: 15px;
+  color: var(--hover-grey);
+}
+
+.footer-icon {
+  margin: 4px;
+  font-size: 25px;
+  color: var(--hover-grey);
+  transition: 0.5s;
+}
+
+.footer-icon:hover i {
+  transform: scale(1.3);
+  color: var(--dark-gray);
+}
