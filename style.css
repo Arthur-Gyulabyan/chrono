@@ -214,6 +214,27 @@ a {
   color: #111;
 }
 
+/* Special offers */
+
+.special-offers {
+  position: relative;
+}
+
+.special-sticker {
+  position: absolute;
+  left: -31px;
+  top: 23px;
+  padding: 0.2em 2em;
+  z-index: 10;
+  transform: rotate(-45deg);
+  background-color: rgb(177, 2, 2);
+  color: #fff;
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 3px;
+  -webkit-clip-path: polygon(21% 0, 0 100%, 100% 100%, 100% 103%, 78% 0);
+  clip-path: polygon(21% 0, 0 100%, 100% 100%, 100% 103%, 78% 0);
+}
+
 /*buy-page main*/
 
 .main__buy--page {
@@ -291,6 +312,7 @@ a {
   justify-content: space-around;
   align-items: center;
   height: 120px;
+  margin-top: 3em;
 }
 
 .footer__copyright {
@@ -299,7 +321,7 @@ a {
   font-size: 12px;
 }
 
-.footer-icon__conteiner {
+.footer-icon__container {
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -307,7 +329,7 @@ a {
   width: 417px;
 }
 
-.footer-icon__paragraf {
+.footer-icon__paragraph {
   font-size: 15px;
   color: var(--hover-grey);
 }
