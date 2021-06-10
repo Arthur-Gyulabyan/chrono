@@ -4,44 +4,151 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./img/chrono-logo-white.png" type="image/x-icon" sizes="16x16" />
+    <link rel="icon" href="./img/logo/chrono-logo-white.png" type="image/x-icon" sizes="16x16" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
     <title>Chrono</title>
   </head>
   <body>
     <nav class="top-nav">
-      <img src="./img/logo-white.png" width="196" alt="Logo" />
+      <!--	<img src="./img/logo-white.png" width="196" alt="Logo" class="top-nav__logo">-->
+      <h1 class="nav-heading">Chrono</h1>
 
       <ul class="categories-bar">
-        <li class=""><a href="./index.html" class="top-nav__link padding-l current">Home</a></li>
-        <li class=""><a href="./buy-page.html" class="top-nav__link padding-l">Buy Now</a></li>
+        <li class="top-nav__item">
+          <a href="./index.html" class="top-nav__link padding-l current">Home</a>
+        </li>
+        <li class="top-nav__item">
+          <a href="./buy-page.html" class="top-nav__link padding-l">Buy Now</a>
+        </li>
         <li class="top-nav__clock">
           <canvas id="canvas" width="60" height="60"></canvas>
         </li>
-        <li class=""><a href="" class="top-nav__link padding-l">Gallery</a></li>
-        <li class=""><a href="./about.html" class="top-nav__link padding-l">About</a></li>
+        <li class="top-nav__item"><a href="" class="top-nav__link padding-l">Gallery</a></li>
+        <li class="top-nav__item"><a href="" class="top-nav__link padding-l">About</a></li>
       </ul>
 
       <button class="btn_sign-in padding-l">Sign in</button>
     </nav>
 
-    <main></main>
+    <header>
+      <div class="header-wrapper">
+        <div class="header-img">
+          <img src="./img/landing/landing1.jpg" alt="Watch" id="landing" />
+        </div>
+      </div>
+    </header>
+
+    <section class="brands-wrapper">
+      <div class="main-header__container margin-s">
+        <h2 class="main-header">
+          <i class="main-header__line-left"></i>
+          <span class="main-header__text">Brands</span>
+          <i class="main-header__line-right"></i>
+        </h2>
+      </div>
+
+      <div class="brand-info__container">
+        <article class="brand-info margin-m">
+          <div class="brand-info__img border-r">
+            <img src="./img/logo/rolex-logo.jpg" alt="Rolex Logo" />
+          </div>
+
+          <div class="brand-info__text">
+            <h3 class="brand-header">ROLEX</h3>
+            <p class="brand-description">
+              For over a century, Rolex watches have accompanied explorers and achievers around the
+              world, from the top of the highest mountains to the deepest reaches of the ocean.
+              Rolex mostly produced mechanical watches, but it has also participated in the
+              development of the original quartz watch movements. Although Rolex has made very few
+              quartz models for its Oyster line, the company's engineers were instrumental in design
+              and implementation of the technology during the late 1960s and early 1970s. In 1968,
+              Rolex collaborated with a consortium of 16 Swiss watch manufacturers to develop the
+              Beta 21 quartz movement used in their Rolex Quartz Date 5100 alongside other
+              manufactures including the Omega Electroquartz watches. Within about five years of
+              research, design, and development, Rolex created the "clean-slate" 5035/5055 movement
+              that would eventually power the Rolex 'Oysterquartz'.
+            </p>
+            <a href="https://www.rolex.com/" class="brand-info__more-info"
+              >More info <i class="fas fa-info-circle"></i
+            ></a>
+          </div>
+        </article>
+
+        <article class="brand-info margin-m">
+          <div class="brand-info__text">
+            <h3 class="brand-header">PATEK PHILIPPE</h3>
+            <p class="brand-description">
+              Patek Philippe SA is a Swiss luxury watch and clock manufacturer founded in 1839,
+              located in Canton of Geneva and the Vallée de Joux. Since 1932, it has been owned by
+              the Stern family in Switzerland. Patek Philippe is one of the oldest watch
+              manufacturers in the world with an uninterrupted watchmaking history since its
+              founding. It designs and manufactures timepieces as well as movements, including some
+              of the most complicated mechanical watches. The company maintains over 400 retail
+              locations globally and over a dozen distribution centers across Asia, Europe, North
+              America, and Oceania. In 2001, it opened the Patek Philippe Museum in Geneva.
+            </p>
+            <a href="https://www.patek.com/en/home" class="brand-info__more-info"
+              >More info <i class="fas fa-info-circle"></i
+            ></a>
+          </div>
+
+          <div class="brand-info__img border-l">
+            <img src="./img/logo/patek-philippe-logo1.png" alt="Rolex Logo" />
+          </div>
+        </article>
+
+        <article class="brand-info margin-m">
+          <div class="brand-info__img border-r">
+            <img src="./img/logo/tissot-logo.jpg" alt="Rolex Logo" />
+          </div>
+
+          <div class="brand-info__text">
+            <h3 class="brand-header">TISSOT</h3>
+            <p class="brand-description">
+              Tissot was founded in 1853 by Charles-Félicien Tissot and his son Charles-Émile Tissot
+              in the Swiss city of Le Locle, in the Neuchâtel area of the Jura Mountains.
+              Charles-Emile Tissot left for Russia in 1858 and succeeded in selling their savonnette
+              pocket watches across the Russian Empire. In 2021, the company is marketing Le Locle
+              Powermatic 80, which has a watch face designed to mimic the clock tower in its
+              founding city of Le Locle. Tissot introduced the first pocket watch as well as the
+              first pocket watch with two time zones in 1853 and the first anti-magnetic watch, in
+              1929–30. The Tissot company was also the first to make watches out of plastic (Idea
+              2001 in 1971), stone (the Alpine granite RockWatch in 1985), mother of pearl (the
+              Pearl watch in 1987), and wood (the Wood watch in 1988).
+            </p>
+            <a href="https://www.tissotwatches.com/" class="brand-info__more-info"
+              >More info <i class="fas fa-info-circle"></i
+            ></a>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <footer class="footer">
       <p class="footer__copyright">Copyright © 2021 Chronograph.</p>
 
-      <img src="./img/logo-white.png" width="196" alt="Logo" />
+      <img src="./img/logo/logo-white.png" width="196" alt="Logo" />
       <div class="footer-icon__conteiner">
         <p class="footer-icon__paragraf">FOLLOW CHRONOGRAPH ON:</p>
 
         <div>
-          <a class="footer-icon" href="#"> <i class="fa fa-facebook-official"></i></a>
+          <a class="footer-icon" href="#"> <i class="fab fa-facebook"></i></a>
           <a class="footer-icon" href="#"><i class="fa fa-instagram"></i></a>
           <a class="footer-icon" href="#"><i class="fa fa-snapchat"></i></a>
           <a class="footer-icon" href="#"><i class="fa fa-pinterest-p"></i></a>
