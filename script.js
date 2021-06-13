@@ -75,3 +75,23 @@ function drawHand(ctx, pos, length, width) {
   ctx.stroke();
   ctx.rotate(-pos);
 }
+
+function changeImage() {
+  const landingImg = document.getElementById('landing');
+  if (!landingImg) {
+    return;
+  }
+
+  let counter = 2;
+  console.log(document);
+
+  setInterval(() => {
+    landingImg.src = `./img/landing/landing${counter++}.jpg`;
+
+    if (counter === 6) {
+      counter = 1;
+    }
+  }, 4000);
+}
+
+changeImage();
