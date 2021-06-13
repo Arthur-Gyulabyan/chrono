@@ -213,6 +213,7 @@ a {
 }
 
 .brand-info {
+  background-color: #fff;
   display: flex;
   width: 90%;
   box-shadow: 3px 3px 17px 6px #888888;
@@ -262,7 +263,7 @@ a {
   color: #fff;
   margin: 1em 2em;
   padding: 0.5em 1em;
-  border: 3px solid #000;
+  border: 3px solid #111;
   border-radius: 40px;
   transition: 0.3s;
 }
@@ -270,6 +271,55 @@ a {
 .brand-info__more-info:hover {
   background-color: #fff;
   color: #111;
+}
+
+@media (max-width: 768px) {
+  .header-img {
+    margin-top: 1em;
+  }
+
+  .brands-wrapper {
+    width: 85%;
+    margin: 1em auto;
+  }
+
+  .brand-info {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  .brand-info__text {
+    width: 100%;
+  }
+
+  .brand-info__img {
+    width: 100%;
+  }
+
+  .brand-description {
+    font-size: 0.7em;
+    margin: 0 1em;
+  }
+
+  .brand-info:nth-child(even),
+  .brand-info:nth-child(odd) {
+    align-self: flex-start;
+  }
+
+  .brand-info:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .brand-info:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  .border-l,
+  .border-r {
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #908e8e;
+  }
 }
 
 /* Special offers */
@@ -293,7 +343,8 @@ a {
 }
 
 /*buy-page main*/
-.main__buy--page {
+.main__buy--page,
+.main__about {
   margin-top: 7.5em;
 }
 
@@ -347,7 +398,6 @@ a {
     margin-right: 6px;
   }
 
-
   .main-header__line-right {
     margin: 0;
   }
@@ -355,6 +405,11 @@ a {
   .main-header__text {
     font-size: 1.2rem;
     letter-spacing: 8px;
+  }
+
+  .main__buy--page,
+  .main__about {
+    margin-top: 2em;
   }
 }
 
@@ -466,17 +521,21 @@ a {
 .main-contact {
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 70px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 3em;
 }
 
 .contact-icon {
   font-size: 2rem;
   color: var(--hover-grey);
   text-align: center;
-  margin-bottom: 70px;
-  width: 170px;
+  margin-bottom: 1em;
+}
+
+.contact-icon * {
+  margin-bottom: 0.8em;
 }
 
 .contact-paragraph {
@@ -489,11 +548,13 @@ a {
 
 .main-icon-parent {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 0;
 }
 
 .main-icon {
   font-size: 0.7em;
+  margin: 0 2px;
 }
 
 .main-icon i:hover {
@@ -507,7 +568,7 @@ a {
     flex-direction: column-reverse;
   }
 
-  .footer__copyright, 
+  .footer__copyright,
   .footer-icon__container {
     align-self: center;
   }
