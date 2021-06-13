@@ -336,6 +336,28 @@ a {
   vertical-align: middle;
 }
 
+@media (max-width: 768px) {
+  .main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .main-header__line-left {
+    margin-right: 6px;
+  }
+
+
+  .main-header__line-right {
+    margin: 0;
+  }
+
+  .main-header__text {
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+  }
+}
+
 .product-container {
   width: 75%;
   margin: auto;
