@@ -47,6 +47,11 @@ a {
   color: inherit;
 }
 
+input {
+  border: none;
+  outline: none;
+}
+
 .padding-s {
   padding: 4px 8px;
 }
@@ -78,15 +83,20 @@ a {
   background: #111;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   z-index: 99;
 }
 
+.top-nav__left {
+  align-self: flex-end;
+  width: 28%;
+}
+
 .nav-heading {
   font-size: 3em;
   font-family: 'Great Vibes', cursive;
-  padding: 10px 0;
   margin-left: 12px;
   color: #fff;
 }
@@ -120,6 +130,44 @@ a {
 
 .link_home-page:hover {
   background-color: var(--hover-grey);
+}
+
+.top-nav__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 28%;
+}
+
+.search-field button {
+  background-color: #fff;
+  color: #999;
+  padding: 6px 6px 4px 6px;
+  border-radius: 8px 0 0 8px;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+}
+
+.search-field button:hover {
+  background-color: var(--light-green);
+  color: #fff;
+}
+
+.search-field input {
+  font-size: 1em;
+  width: 90%;
+  height: 32px;
+  border-radius: 10px;
+  padding: 0 0.2rem 0 2rem;
+  color: #111;
+  caret-color: #999;
+}
+
+.search-field input::-webkit-input-placeholder {
+  vertical-align: bottom;
+  font-size: 16px;
 }
 
 .btn_sign-in {
@@ -156,10 +204,36 @@ a {
 @media (max-width: 768px) {
   .top-nav {
     flex-direction: column;
+    align-items: stretch;
     position: static;
     height: auto;
     z-index: 99;
     text-align: center;
+  }
+
+  .top-nav__left {
+    width: 100%;
+    align-self: center;
+  }
+
+  .top-nav__right {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .search-field {
+    position: relative;
+    padding: 1.2em 0;
+  }
+
+  .search-field button {
+    left: 12px;
+  }
+
+  .nav-heading {
+    align-self: center;
+    margin: 0;
+    padding-top: 8px;
   }
 
   .top-nav__item {
