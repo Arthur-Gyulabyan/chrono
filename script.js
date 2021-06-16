@@ -83,7 +83,6 @@ function changeImage() {
   }
 
   let counter = 2;
-  console.log(document);
 
   setInterval(() => {
     landingImg.src = `./img/landing/landing${counter++}.jpg`;
@@ -100,25 +99,29 @@ changeImage();
 const searchBtn = document.getElementById('search-btn');
 const searchField = document.getElementById('search-input');
 
-const getQueryString = () => {
-  const queryString = window.location.search;
+function getQuerySearchValue() {
+  const queryString = window.location.search.slice(1);
+  const values = queryString.split('&');
+  let searchValue = '';
 
-  if (queryString === '') {
-    return null;
-  }
-
-  const result = queryString.replace(/.*?\?/, '');
-
-  return result;
-};
+  values.forEach(el => {
+      const pair = el.split('=');
+      if(pair[0] === 'search') {
+        searchValue = pair[1];
+      }
+  })
+  
+  return searchValue === '' ? null : searchValue;
+}
 
 searchBtn.addEventListener('click', () => {
-  window.location.search = searchField.value;
-  console.log(getQueryString);
+  window.location.search = `search=${searchField.value}`;
 });
 
 window.addEventListener('load', () => {
-  const searchValue = getQueryString();
+  const searchValue = getQuerySearchValue();
 
-  searchField.value = searchValue;
+  if(searchValue) {
+    searchField.value = searchValue;
+  }
 });
