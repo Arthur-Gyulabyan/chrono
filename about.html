@@ -54,7 +54,9 @@
   </head>
   <body>
     <nav class="top-nav">
-      <h1 class="nav-heading">Chrono</h1>
+      <div class="top-nav__left">
+        <h1 class="nav-heading">Chrono</h1>
+      </div>
 
       <ul class="categories-bar">
         <li class="top-nav__item">
@@ -74,7 +76,14 @@
         </li>
       </ul>
 
-      <button class="btn_sign-in padding-l">Sign&nbspIn</button>
+      <div class="top-nav__right">
+        <div class="search-field">
+          <input type="search" placeholder="Search" id="search-input" />
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <button class="btn_sign-in padding-l">Sign&nbspIn</button>
+      </div>
     </nav>
 
     <main class="main__about">

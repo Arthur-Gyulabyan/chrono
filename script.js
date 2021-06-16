@@ -95,3 +95,30 @@ function changeImage() {
 }
 
 changeImage();
+
+// Setting query string as search value
+const searchBtn = document.getElementById('search-btn');
+const searchField = document.getElementById('search-input');
+
+const getQueryString = () => {
+  const queryString = window.location.search;
+
+  if (queryString === '') {
+    return null;
+  }
+
+  const result = queryString.replace(/.*?\?/, '');
+
+  return result;
+};
+
+searchBtn.addEventListener('click', () => {
+  window.location.search = searchField.value;
+  console.log(getQueryString);
+});
+
+window.addEventListener('load', () => {
+  const searchValue = getQueryString();
+
+  searchField.value = searchValue;
+});
