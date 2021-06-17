@@ -118,6 +118,13 @@ searchBtn.addEventListener('click', () => {
   window.location.search = `search=${searchField.value}`;
 });
 
+searchField.addEventListener('keyup', (event) => {
+  if (event.keyCode === 13) {
+    console.log('asd');
+    window.location.search = `search=${searchField.value}`;
+  }
+});
+
 window.addEventListener('load', () => {
   const searchValue = getQuerySearchValue();
 
