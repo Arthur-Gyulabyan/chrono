@@ -54,3 +54,25 @@ window.addEventListener('load', () => {
         searchField.value = searchValue;
     }
 });
+
+
+// Sign up modal
+
+const signUpBtn = document.querySelector('.btn_sign-in');
+const modal = document.getElementById('sign-up-modal');
+const closeBtn = document.querySelector('.close');
+
+signUpBtn.addEventListener('click', (event) => {
+    modal.style.display = 'block';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+closeBtn.addEventListener('click', (event) => {
+    modal.style.display = "none";
+});
+
