@@ -1,252 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Luxury wrist watches." />
-    <meta
-      name="keywords"
-      content="wristwatches, rolex, tissot, time, watch, luxury, chronograph, chrono"
-    />
-    <meta name="author" content="Aramayis Sargsyan, Arthur Gyulabyan" />
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="Luxury wrist watches."/>
+	<meta
+		name="keywords"
+		content="wristwatches, rolex, tissot, time, watch, luxury, chronograph, chrono"
+	/>
+	<meta name="author" content="Aramayis Sargsyan, Arthur Gyulabyan"/>
 
-    <!-- OG tags -->
-    <meta property="og:title" content="Chrono" />
-    <meta
-      property="og:description"
-      content="Buy luxury wrist watches of renowned brands in the world."
-    />
-    <meta property="og:url" content="https://arthur-gyulabyan.github.io/chrono/index.html" />
-    <meta
-      property="og:image"
-      content="https://raw.githubusercontent.com/Arthur-Gyulabyan/chrono/master/img/logo/social-media-img.jpg"
-    />
-    <meta property="og:type" content="website" />
+	<!-- OG tags -->
+	<meta property="og:title" content="Chrono"/>
+	<meta
+		property="og:description"
+		content="Buy luxury wrist watches of renowned brands in the world."
+	/>
+	<meta property="og:url" content="https://arthur-gyulabyan.github.io/chrono/index.html"/>
+	<meta
+		property="og:image"
+		content="https://raw.githubusercontent.com/Arthur-Gyulabyan/chrono/master/img/logo/social-media-img.jpg"
+	/>
+	<meta property="og:type" content="website"/>
 
-    <!-- Twitter share -->
-    <meta name="twitter:title" content="Chrono" />
-    <meta
-      name="twitter:description"
-      content="Buy luxury wrist watches of renowned brands in the world."
-    />
-    <meta
-      name="twitter:image"
-      content=" https://raw.githubusercontent.com/Arthur-Gyulabyan/chrono/master/img/logo/social-media-img.jpg"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+	<!-- Twitter share -->
+	<meta name="twitter:title" content="Chrono"/>
+	<meta
+		name="twitter:description"
+		content="Buy luxury wrist watches of renowned brands in the world."
+	/>
+	<meta
+		name="twitter:image"
+		content=" https://raw.githubusercontent.com/Arthur-Gyulabyan/chrono/master/img/logo/social-media-img.jpg"
+	/>
+	<meta name="twitter:card" content="summary_large_image"/>
 
-    <link rel="icon" href="./img/logo/chrono-logo-white.png" type="image/x-icon" sizes="16x16" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Chrono</title>
-  </head>
-  <body>
-    <nav class="top-nav">
-      <div class="top-nav__left">
-        <h1 class="nav-heading">Chrono</h1>
-      </div>
+	<link rel="icon" href="./img/logo/chrono-logo-white.png" type="image/x-icon" sizes="16x16"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com"/>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+		rel="stylesheet"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+		crossorigin="anonymous"
+	/>
+	<link rel="stylesheet" href="./css/main.css"/>
+	<title>Chrono</title>
 
-      <ul class="categories-bar">
-        <li class="top-nav__item">
-          <a href="./index.html" class="top-nav__link padding-l current">Home</a>
-        </li>
-        <li class="top-nav__item">
-          <a href="./buy-page.html" class="top-nav__link padding-l">Buy&nbspNow</a>
-        </li>
-        <li class="top-nav__clock">
-          <canvas id="canvas" width="60" height="60"></canvas>
-        </li>
-        <li class="top-nav__item">
-          <a href="./gallery.html" class="top-nav__link padding-l">Gallery</a>
-        </li>
-        <li class="top-nav__item">
-          <a href="./about.html" class="top-nav__link padding-l">About</a>
-        </li>
-      </ul>
+	<!-- Script -->
+	<script src="./js/canvas-clock.js" defer></script>
+</head>
+<body>
+<nav class="top-nav">
+	<div class="top-nav__left">
+		<h1 class="nav-heading">Chrono</h1>
+	</div>
 
-      <div class="top-nav__right">
-        <div class="search-field">
-          <input type="search" placeholder="Search" id="search-input" />
-          <button id="search-btn"><i class="fas fa-search"></i></button>
-        </div>
+	<ul class="categories-bar">
+		<li class="top-nav__item">
+			<a href="./index.html" class="top-nav__link padding-l current">Home</a>
+		</li>
+		<li class="top-nav__item">
+			<a href="./buy-page.html" class="top-nav__link padding-l">Buy&nbspNow</a>
+		</li>
+		<li class="top-nav__clock">
+			<canvas id="canvas" width="60" height="60"></canvas>
+		</li>
+		<li class="top-nav__item">
+			<a href="./gallery.html" class="top-nav__link padding-l">Gallery</a>
+		</li>
+		<li class="top-nav__item">
+			<a href="./about.html" class="top-nav__link padding-l">About</a>
+		</li>
+	</ul>
 
-        <button class="btn_sign-in padding-l">Sign&nbspIn</button>
-      </div>
-    </nav>
+	<div class="top-nav__right">
+		<div class="search-field">
+			<input type="search" placeholder="Search" id="search-input"/>
+			<button id="search-btn"><i class="fas fa-search"></i></button>
+		</div>
 
-    <header>
-      <div class="header-wrapper">
-        <div class="header-img">
-          <img src="./img/landing/landing1.jpg" alt="Watch" id="landing" />
-        </div>
-      </div>
-    </header>
+		<button class="btn_sign-in padding-l">Sign&nbspIn</button>
+	</div>
+</nav>
 
-    <main class="brands-wrapper">
-      <div class="main-header__container margin-s">
-        <h2 class="main-header">
-          <i class="main-header__line-left"></i>
-          <span class="main-header__text">Brands</span>
-          <i class="main-header__line-right"></i>
-        </h2>
-      </div>
+<header>
+	<div class="header-wrapper">
+		<div class="header-img">
+			<img src="./img/landing/landing1.jpg" alt="Watch" id="landing"/>
+		</div>
+	</div>
+</header>
 
-      <div class="brand-info__container">
-        <article class="brand-info margin-m">
-          <div class="brand-info__img border-r">
-            <img src="./img/logo/rolex-logo.jpg" alt="Rolex Logo" />
-          </div>
+<main class="brands-wrapper">
+	<div class="main-header__container margin-s">
+		<h2 class="main-header">
+			<i class="main-header__line-left"></i>
+			<span class="main-header__text">Brands</span>
+			<i class="main-header__line-right"></i>
+		</h2>
+	</div>
 
-          <div class="brand-info__text">
-            <h3 class="brand-header">ROLEX</h3>
-            <p class="brand-description">
-              For over a century, Rolex watches have accompanied explorers and achievers around the
-              world, from the top of the highest mountains to the deepest reaches of the ocean.
-              Rolex mostly produced mechanical watches, but it has also participated in the
-              development of the original quartz watch movements. Although Rolex has made very few
-              quartz models for its Oyster line, the company's engineers were instrumental in design
-              and implementation of the technology during the late 1960s and early 1970s. In 1968,
-              Rolex collaborated with a consortium of 16 Swiss watch manufacturers to develop the
-              Beta 21 quartz movement used in their Rolex Quartz Date 5100 alongside other
-              manufactures including the Omega Electroquartz watches. Within about five years of
-              research, design, and development, Rolex created the "clean-slate" 5035/5055 movement
-              that would eventually power the Rolex 'Oysterquartz'.
-            </p>
-            <a href="https://www.rolex.com/" class="brand-info__more-info"
-              >More info <i class="fas fa-info-circle"></i
-            ></a>
-          </div>
-        </article>
+	<div class="brand-info__container">
+		<article class="brand-info margin-m">
+			<div class="brand-info__img border-r">
+				<img src="./img/logo/rolex-logo.jpg" alt="Rolex Logo"/>
+			</div>
 
-        <article class="brand-info margin-m">
-          <div class="brand-info__text">
-            <h3 class="brand-header">PATEK PHILIPPE</h3>
-            <p class="brand-description">
-              Patek Philippe SA is a Swiss luxury watch and clock manufacturer founded in 1839,
-              located in Canton of Geneva and the Vallée de Joux. Since 1932, it has been owned by
-              the Stern family in Switzerland. Patek Philippe is one of the oldest watch
-              manufacturers in the world with an uninterrupted watchmaking history since its
-              founding. It designs and manufactures timepieces as well as movements, including some
-              of the most complicated mechanical watches. The company maintains over 400 retail
-              locations globally and over a dozen distribution centers across Asia, Europe, North
-              America, and Oceania. In 2001, it opened the Patek Philippe Museum in Geneva.
-            </p>
-            <a href="https://www.patek.com/en/home" class="brand-info__more-info"
-              >More info <i class="fas fa-info-circle"></i
-            ></a>
-          </div>
+			<div class="brand-info__text">
+				<h3 class="brand-header">ROLEX</h3>
+				<p class="brand-description">
+					For over a century, Rolex watches have accompanied explorers and achievers around the
+					world, from the top of the highest mountains to the deepest reaches of the ocean.
+					Rolex mostly produced mechanical watches, but it has also participated in the
+					development of the original quartz watch movements. Although Rolex has made very few
+					quartz models for its Oyster line, the company's engineers were instrumental in design
+					and implementation of the technology during the late 1960s and early 1970s. In 1968,
+					Rolex collaborated with a consortium of 16 Swiss watch manufacturers to develop the
+					Beta 21 quartz movement used in their Rolex Quartz Date 5100 alongside other
+					manufactures including the Omega Electroquartz watches. Within about five years of
+					research, design, and development, Rolex created the "clean-slate" 5035/5055 movement
+					that would eventually power the Rolex 'Oysterquartz'.
+				</p>
+				<a href="https://www.rolex.com/" class="brand-info__more-info"
+				>More info <i class="fas fa-info-circle"></i
+				></a>
+			</div>
+		</article>
 
-          <div class="brand-info__img border-l">
-            <img src="./img/logo/patek-philippe-logo1.png" alt="Rolex Logo" />
-          </div>
-        </article>
+		<article class="brand-info margin-m">
+			<div class="brand-info__text">
+				<h3 class="brand-header">PATEK PHILIPPE</h3>
+				<p class="brand-description">
+					Patek Philippe SA is a Swiss luxury watch and clock manufacturer founded in 1839,
+					located in Canton of Geneva and the Vallée de Joux. Since 1932, it has been owned by
+					the Stern family in Switzerland. Patek Philippe is one of the oldest watch
+					manufacturers in the world with an uninterrupted watchmaking history since its
+					founding. It designs and manufactures timepieces as well as movements, including some
+					of the most complicated mechanical watches. The company maintains over 400 retail
+					locations globally and over a dozen distribution centers across Asia, Europe, North
+					America, and Oceania. In 2001, it opened the Patek Philippe Museum in Geneva.
+				</p>
+				<a href="https://www.patek.com/en/home" class="brand-info__more-info"
+				>More info <i class="fas fa-info-circle"></i
+				></a>
+			</div>
 
-        <article class="brand-info margin-m">
-          <div class="brand-info__img border-r">
-            <img src="./img/logo/tissot-logo.jpg" alt="Rolex Logo" />
-          </div>
+			<div class="brand-info__img border-l">
+				<img src="./img/logo/patek-philippe-logo1.png" alt="Rolex Logo"/>
+			</div>
+		</article>
 
-          <div class="brand-info__text">
-            <h3 class="brand-header">TISSOT</h3>
-            <p class="brand-description">
-              Tissot was founded in 1853 by Charles-Félicien Tissot and his son Charles-Émile Tissot
-              in the Swiss city of Le Locle, in the Neuchâtel area of the Jura Mountains.
-              Charles-Emile Tissot left for Russia in 1858 and succeeded in selling their savonnette
-              pocket watches across the Russian Empire. In 2021, the company is marketing Le Locle
-              Powermatic 80, which has a watch face designed to mimic the clock tower in its
-              founding city of Le Locle. Tissot introduced the first pocket watch as well as the
-              first pocket watch with two time zones in 1853 and the first anti-magnetic watch, in
-              1929–30. The Tissot company was also the first to make watches out of plastic (Idea
-              2001 in 1971), stone (the Alpine granite RockWatch in 1985), mother of pearl (the
-              Pearl watch in 1987), and wood (the Wood watch in 1988).
-            </p>
-            <a href="https://www.tissotwatches.com/" class="brand-info__more-info"
-              >More info <i class="fas fa-info-circle"></i
-            ></a>
-          </div>
-        </article>
-      </div>
-    </main>
+		<article class="brand-info margin-m">
+			<div class="brand-info__img border-r">
+				<img src="./img/logo/tissot-logo.jpg" alt="Rolex Logo"/>
+			</div>
 
-    <section class="special-offers__wrapper">
-      <div class="main-header__container margin-s">
-        <h2 class="main-header">
-          <i class="main-header__line-left"></i>
-          <span class="main-header__text">Special Offers</span>
-          <i class="main-header__line-right"></i>
-        </h2>
-      </div>
+			<div class="brand-info__text">
+				<h3 class="brand-header">TISSOT</h3>
+				<p class="brand-description">
+					Tissot was founded in 1853 by Charles-Félicien Tissot and his son Charles-Émile Tissot
+					in the Swiss city of Le Locle, in the Neuchâtel area of the Jura Mountains.
+					Charles-Emile Tissot left for Russia in 1858 and succeeded in selling their savonnette
+					pocket watches across the Russian Empire. In 2021, the company is marketing Le Locle
+					Powermatic 80, which has a watch face designed to mimic the clock tower in its
+					founding city of Le Locle. Tissot introduced the first pocket watch as well as the
+					first pocket watch with two time zones in 1853 and the first anti-magnetic watch, in
+					1929–30. The Tissot company was also the first to make watches out of plastic (Idea
+					2001 in 1971), stone (the Alpine granite RockWatch in 1985), mother of pearl (the
+					Pearl watch in 1987), and wood (the Wood watch in 1988).
+				</p>
+				<a href="https://www.tissotwatches.com/" class="brand-info__more-info"
+				>More info <i class="fas fa-info-circle"></i
+				></a>
+			</div>
+		</article>
+	</div>
+</main>
 
-      <div class="product-container">
-        <ul class="product-list">
-          <li class="product-list__item special-offers">
-            <img src="./img/watches/rolex1.jpg" alt="Rolex" class="product-list__item--img" />
-            <span class="special-sticker">Special</span>
-            <h3 class="product-list__item--brand">ROLEX</h3>
-            <p class="product-list__item--mark">MILGAUSS</p>
-            <p class="product-list__item--price">3200$</p>
-            <button class="product-list__item--button">
-              <i class="fas fa-shopping-cart"></i> Buy Now
-            </button>
-          </li>
+<section class="special-offers__wrapper">
+	<div class="main-header__container margin-s">
+		<h2 class="main-header">
+			<i class="main-header__line-left"></i>
+			<span class="main-header__text">Special Offers</span>
+			<i class="main-header__line-right"></i>
+		</h2>
+	</div>
 
-          <li class="product-list__item special-offers">
-            <img src="./img/watches/rolex2.jpg" alt="Rolex" class="product-list__item--img" />
-            <span class="special-sticker">Special</span>
+	<div class="product-container">
+		<ul class="product-list">
+			<li class="product-list__item special-offers">
+				<img src="./img/watches/rolex1.jpg" alt="Rolex" class="product-list__item--img"/>
+				<span class="special-sticker">Special</span>
+				<h3 class="product-list__item--brand">ROLEX</h3>
+				<p class="product-list__item--mark">MILGAUSS</p>
+				<p class="product-list__item--price">3200$</p>
+				<button class="product-list__item--button">
+					<i class="fas fa-shopping-cart"></i> Buy Now
+				</button>
+			</li>
 
-            <h3 class="product-list__item--brand">ROLEX</h3>
-            <p class="product-list__item--mark">MILGAUSS</p>
-            <p class="product-list__item--price">3200$</p>
-            <button class="product-list__item--button">
-              <i class="fas fa-shopping-cart"></i> Buy Now
-            </button>
-          </li>
+			<li class="product-list__item special-offers">
+				<img src="./img/watches/rolex2.jpg" alt="Rolex" class="product-list__item--img"/>
+				<span class="special-sticker">Special</span>
 
-          <li class="product-list__item special-offers">
-            <img src="./img/watches/rolex3.jpg" alt="Rolex" class="product-list__item--img" />
-            <span class="special-sticker">Special</span>
+				<h3 class="product-list__item--brand">ROLEX</h3>
+				<p class="product-list__item--mark">MILGAUSS</p>
+				<p class="product-list__item--price">3200$</p>
+				<button class="product-list__item--button">
+					<i class="fas fa-shopping-cart"></i> Buy Now
+				</button>
+			</li>
 
-            <h3 class="product-list__item--brand">ROLEX</h3>
-            <p class="product-list__item--mark">MILGAUSS</p>
-            <p class="product-list__item--price">3200$</p>
-            <button class="product-list__item--button">
-              <i class="fas fa-shopping-cart"></i> Buy Now
-            </button>
-          </li>
-        </ul>
-      </div>
-    </section>
+			<li class="product-list__item special-offers">
+				<img src="./img/watches/rolex3.jpg" alt="Rolex" class="product-list__item--img"/>
+				<span class="special-sticker">Special</span>
 
-    <footer class="footer">
-      <p class="footer__copyright">Copyright © 2021 Chrono.</p>
+				<h3 class="product-list__item--brand">ROLEX</h3>
+				<p class="product-list__item--mark">MILGAUSS</p>
+				<p class="product-list__item--price">3200$</p>
+				<button class="product-list__item--button">
+					<i class="fas fa-shopping-cart"></i> Buy Now
+				</button>
+			</li>
+		</ul>
+	</div>
+</section>
 
-      <img src="./img/logo/logo-white.png" width="196" alt="Logo" />
-      <div class="footer-icon__container">
-        <p class="footer-icon__paragraph">Follow Us On:</p>
+<footer class="footer">
+	<p class="footer__copyright">Copyright © 2021 Chrono.</p>
 
-        <div>
-          <a class="footer-icon" href="#"><i class="fab fa-facebook-square"></i></a>
-          <a class="footer-icon" href="#"><i class="fab fa-instagram"></i></a>
-          <a class="footer-icon" href="#"><i class="fab fa-snapchat-square"></i></a>
-          <a class="footer-icon" href="#"><i class="fab fa-pinterest-square"></i></a>
-          <a class="footer-icon" href="#"><i class="fab fa-twitter-square"></i></a>
-          <a class="footer-icon" href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </div>
-    </footer>
+	<img src="./img/logo/logo-white.png" width="196" alt="Logo"/>
+	<div class="footer-icon__container">
+		<p class="footer-icon__paragraph">Follow Us On:</p>
 
-    <script src="./script.js"></script>
-  </body>
+		<div>
+			<a class="footer-icon" href="#"><i class="fab fa-facebook-square"></i></a>
+			<a class="footer-icon" href="#"><i class="fab fa-instagram"></i></a>
+			<a class="footer-icon" href="#"><i class="fab fa-snapchat-square"></i></a>
+			<a class="footer-icon" href="#"><i class="fab fa-pinterest-square"></i></a>
+			<a class="footer-icon" href="#"><i class="fab fa-twitter-square"></i></a>
+			<a class="footer-icon" href="#"><i class="fab fa-linkedin"></i></a>
+		</div>
+	</div>
+</footer>
+
+<script src="./js/index.js"></script>
+</body>
 </html>

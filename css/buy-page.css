@@ -1,0 +1,131 @@
+/*buy-page main*/
+.main__buy--page,
+.main__about {
+    margin-top: 7.5em;
+}
+
+.main-header {
+    text-align: center;
+}
+
+.main-header__text {
+    display: inline-block;
+    color: #656565;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 23px;
+    max-width: 640px;
+    vertical-align: middle;
+}
+
+.main-header__line-left {
+    display: inline-block;
+    margin-right: 28px;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 100%;
+    width: 70px;
+    height: 30px;
+    background-image: url(../img/logo/line1.png);
+    vertical-align: middle;
+}
+
+.main-header__line-right {
+    display: inline-block;
+    margin-left: 6px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 100%;
+    width: 70px;
+    height: 30px;
+    background-image: url(../img/logo/line2.png);
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .main-header__line-left {
+        margin-right: 6px;
+    }
+
+    .main-header__line-right {
+        margin: 0;
+    }
+
+    .main-header__text {
+        font-size: 1.2rem;
+        letter-spacing: 8px;
+    }
+
+    .main__buy--page,
+    .main__about {
+        margin-top: 2em;
+    }
+}
+
+.product-container {
+    width: 75%;
+    margin: auto;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.product-list__item {
+    background: #fffcf6;
+    width: 320px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 5px 10px 10px #888888;
+    margin: 0.8em;
+    transition: 0.3s;
+}
+
+.product-list__item:hover {
+    transform: scale(1.04);
+}
+
+.product-list__item--img {
+    width: 90%;
+    margin-top: 1em;
+}
+
+.product-list__item--brand {
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
+    margin: 0 1em 0.5em;
+}
+
+.product-list__item--mark {
+    color: #515151;
+    font-size: 0.8em;
+}
+
+.product-list__item--price {
+    font-size: 1.5em;
+    margin: 0.2em 0;
+}
+
+.product-list__item--button {
+    background: var(--light-green);
+    font-family: inherit;
+    padding: 0.6em 1.2em;
+    margin: 1em;
+    color: #fff;
+    border-radius: 13px;
+    transition: 0.3s;
+}
+
+.product-list__item--button:hover {
+    background: var(--dark-green);
+}
