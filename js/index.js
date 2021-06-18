@@ -68,11 +68,11 @@ signUpBtn.addEventListener('click', (event) => {
 
 window.addEventListener('click', (event) => {
     if (event.target === modal) {
-        modal.style.display = "none";
+        modal.style.display = 'none';
     }
 });
 
 closeBtn.addEventListener('click', (event) => {
-    modal.style.display = "none";
+    modal.style.display = 'none';
 });
 
