@@ -57,7 +57,6 @@ window.addEventListener('load', () => {
 
 
 // Sign up modal
-
 const signUpBtn = document.querySelector('.btn_sign-in');
 const modal = document.getElementById('sign-up-modal');
 const closeBtn = document.querySelector('.close');
@@ -76,3 +75,30 @@ closeBtn.addEventListener('click', (event) => {
     modal.style.display = 'none';
 });
 
+
+// Sign up form validation
+const firstNameFiled = document.querySelector('#first-name');
+const firstNameMessage = document.querySelector('#first-name-message');
+
+const isValidName = (name) => {
+    const regEx = /[^a-zA-z]/;
+
+    return regEx.test(name) || name.length < 2;
+};
+
+firstNameFiled.addEventListener('input', (event) => {
+    const name = event.target.value;
+
+   if(isValidName(name)) {
+       firstNameFiled.classList.remove('valid');
+       firstNameFiled.classList.add('invalid');
+       firstNameMessage.textContent = 'At least 2 characters. Only letters.';
+       firstNameMessage.style.visibility = 'visible';
+       firstNameMessage.classList.remove('validation-message-valid');
+   } else {
+       firstNameFiled.classList.remove('invalid');
+       firstNameFiled.classList.add('valid');
+       firstNameMessage.textContent = 'Name is valid!';
+       firstNameMessage.classList.add('validation-message-valid');
+   }
+});
