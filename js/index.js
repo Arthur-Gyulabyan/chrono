@@ -79,17 +79,25 @@ closeBtn.addEventListener('click', (event) => {
 // Sign up form validation
 const firstNameFiled = document.querySelector('#first-name');
 const firstNameMessage = document.querySelector('#first-name-message');
+const lastNameFiled = document.querySelector('#last-name');
+const lastNameMessage = document.querySelector('#last-name-message');
 
-const isValidName = (name) => {
+const isInvalidName = (name) => {
     const regEx = /[^a-zA-z]/;
 
     return regEx.test(name) || name.length < 2;
 };
 
+const isInvalidLastName = (lastName) => {
+    const regEx = /[^a-zA-z]/;
+
+    return regEx.test(lastName) || lastName.length < 4;
+};
+
 firstNameFiled.addEventListener('input', (event) => {
     const name = event.target.value;
 
-   if(isValidName(name)) {
+   if(isInvalidName(name)) {
        firstNameFiled.classList.remove('valid');
        firstNameFiled.classList.add('invalid');
        firstNameMessage.textContent = 'At least 2 characters. Only letters.';
@@ -101,4 +109,21 @@ firstNameFiled.addEventListener('input', (event) => {
        firstNameMessage.textContent = 'Name is valid!';
        firstNameMessage.classList.add('validation-message-valid');
    }
+});
+
+lastNameFiled.addEventListener('input', (event) => {
+    const lastName = event.target.value;
+
+    if(isInvalidLastName(lastName)) {
+        lastNameFiled.classList.remove('valid');
+        lastNameFiled.classList.add('invalid');
+        lastNameMessage.textContent = 'At least 4 characters. Only letters.';
+        lastNameMessage.style.visibility = 'visible';
+        lastNameMessage.classList.remove('validation-message-valid');
+    } else {
+        lastNameFiled.classList.remove('invalid');
+        lastNameFiled.classList.add('valid');
+        lastNameMessage.textContent = 'Last name is valid!';
+        lastNameMessage.classList.add('validation-message-valid');
+    }
 });
