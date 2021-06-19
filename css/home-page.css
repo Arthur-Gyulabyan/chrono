@@ -31,31 +31,13 @@
 }
 
 @keyframes left-next {
-    from {
-        left: 100%;
-    }
-    to {
-        left: 0;
-    }
-}
-
-@keyframes left-curr {
-    from {
-        left: 0;
-    }
-    to {
-        left: -100%;
-    }
-}
-
-@keyframes right-next {
-    from { left: -100%; }
+    from { left: 100%; }
     to { left: 0; }
 }
 
-@keyframes right-curr {
+@keyframes left-curr {
     from { left: 0; }
-    to { left: 100%; }
+    to { left: -100%; }
 }
 
 .dots {
