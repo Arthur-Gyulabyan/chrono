@@ -77,12 +77,14 @@ closeBtn.addEventListener('click', (event) => {
 
 
 // Sign up form validation
-const firstNameFiled = document.querySelector('#first-name');
+const firstNameField = document.querySelector('#first-name');
 const firstNameMessage = document.querySelector('#first-name-message');
-const lastNameFiled = document.querySelector('#last-name');
+const lastNameField = document.querySelector('#last-name');
 const lastNameMessage = document.querySelector('#last-name-message');
-const emailFiled = document.querySelector('#email');
+const emailField = document.querySelector('#email');
 const emailMessage = document.querySelector('#email-message');
+const pswField = document.querySelector('#psw');
+const pswMessage = document.querySelector('#psw-message');
 
 const isInvalidName = (name) => {
     const regEx = /[^a-zA-z]/;
@@ -102,53 +104,76 @@ const isValidEmail = (email) => {
     return regEx.test(email);
 };
 
-firstNameFiled.addEventListener('input', (event) => {
+const isValidPsw = (psw) => {
+    const regEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+    return psw.match(regEx);
+};
+
+firstNameField.addEventListener('input', (event) => {
     const name = event.target.value;
 
     if (isInvalidName(name)) {
-        firstNameFiled.classList.remove('valid');
-        firstNameFiled.classList.add('invalid');
+        firstNameField.classList.remove('valid');
+        firstNameField.classList.add('invalid');
         firstNameMessage.textContent = 'At least 2 characters. Only letters.';
         firstNameMessage.style.visibility = 'visible';
         firstNameMessage.classList.remove('validation-message-valid');
     } else {
-        firstNameFiled.classList.remove('invalid');
-        firstNameFiled.classList.add('valid');
+        firstNameField.classList.remove('invalid');
+        firstNameField.classList.add('valid');
         firstNameMessage.textContent = 'Name is valid!';
         firstNameMessage.classList.add('validation-message-valid');
     }
 });
 
-lastNameFiled.addEventListener('input', (event) => {
+lastNameField.addEventListener('input', (event) => {
     const lastName = event.target.value;
 
     if (isInvalidLastName(lastName)) {
-        lastNameFiled.classList.remove('valid');
-        lastNameFiled.classList.add('invalid');
+        lastNameField.classList.remove('valid');
+        lastNameField.classList.add('invalid');
         lastNameMessage.textContent = 'At least 4 characters. Only letters.';
         lastNameMessage.style.visibility = 'visible';
         lastNameMessage.classList.remove('validation-message-valid');
     } else {
-        lastNameFiled.classList.remove('invalid');
-        lastNameFiled.classList.add('valid');
+        lastNameField.classList.remove('invalid');
+        lastNameField.classList.add('valid');
         lastNameMessage.textContent = 'Last name is valid!';
         lastNameMessage.classList.add('validation-message-valid');
     }
 });
 
-emailFiled.addEventListener('input', (event) => {
+emailField.addEventListener('input', (event) => {
     const email = event.target.value;
 
     if (isValidEmail(email)) {
-        emailFiled.classList.remove('invalid');
-        emailFiled.classList.add('valid');
+        emailField.classList.remove('invalid');
+        emailField.classList.add('valid');
         emailMessage.textContent = 'Email is valid!';
         emailMessage.classList.add('validation-message-valid');
     } else {
-        emailFiled.classList.remove('valid');
-        emailFiled.classList.add('invalid');
+        emailField.classList.remove('valid');
+        emailField.classList.add('invalid');
         emailMessage.textContent = 'Invalid Email!';
         emailMessage.style.visibility = 'visible';
         emailMessage.classList.remove('validation-message-valid');
+    }
+});
+
+pswField.addEventListener('input', (event) => {
+    const psw = event.target.value;
+
+    if (isValidPsw(psw)) {
+        pswField.classList.remove('invalid');
+        pswField.classList.add('valid');
+        pswMessage.textContent = 'Password is valid!';
+        pswMessage.classList.add('validation-message-valid');
+    } else {
+        pswField.classList.remove('valid');
+        pswField.classList.add('invalid');
+        pswMessage.textContent = '6 - 20 characters (1 digit, 1 uppercase, 1 lowercase).';
+        pswMessage.style.visibility = 'visible';
+        pswMessage.classList.remove('validation-message-valid');
     }
 });
