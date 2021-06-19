@@ -57,7 +57,6 @@ window.addEventListener('load', () => {
 
 
 // Sign up modal
-
 const signUpBtn = document.querySelector('.btn_sign-in');
 const modal = document.getElementById('sign-up-modal');
 const closeBtn = document.querySelector('.close');
@@ -68,11 +67,137 @@ signUpBtn.addEventListener('click', (event) => {
 
 window.addEventListener('click', (event) => {
     if (event.target === modal) {
-        modal.style.display = "none";
+        modal.style.display = 'none';
     }
 });
 
 closeBtn.addEventListener('click', (event) => {
-    modal.style.display = "none";
+    modal.style.display = 'none';
 });
 
+
+// Sign up form validation
+const firstNameField = document.querySelector('#first-name');
+const firstNameMessage = document.querySelector('#first-name-message');
+const lastNameField = document.querySelector('#last-name');
+const lastNameMessage = document.querySelector('#last-name-message');
+const emailField = document.querySelector('#email');
+const emailMessage = document.querySelector('#email-message');
+const pswField = document.querySelector('#psw');
+const pswMessage = document.querySelector('#psw-message');
+const pswRepeatField = document.querySelector('#psw-repeat');
+const pswRepeatMessage = document.querySelector('#psw-repeat-message');
+
+const isInvalidName = (name) => {
+    const regEx = /[^a-zA-z]/;
+
+    return regEx.test(name) || name.length < 2;
+};
+
+const isInvalidLastName = (lastName) => {
+    const regEx = /[^a-zA-z]/;
+
+    return regEx.test(lastName) || lastName.length < 4;
+};
+
+const isValidEmail = (email) => {
+    const regEx = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    return regEx.test(email);
+};
+
+const isValidPsw = (psw) => {
+    const regEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+    return psw.match(regEx);
+};
+
+const isTheSamePsw = (psw, pswRepeat) => {
+    return isValidPsw(pswRepeat) && psw === pswRepeat;
+}
+
+firstNameField.addEventListener('input', (event) => {
+    const name = event.target.value;
+
+    if (isInvalidName(name)) {
+        firstNameField.classList.remove('valid');
+        firstNameField.classList.add('invalid');
+        firstNameMessage.textContent = 'At least 2 characters. Only letters.';
+        firstNameMessage.style.visibility = 'visible';
+        firstNameMessage.classList.remove('validation-message-valid');
+    } else {
+        firstNameField.classList.remove('invalid');
+        firstNameField.classList.add('valid');
+        firstNameMessage.textContent = 'Name is valid!';
+        firstNameMessage.classList.add('validation-message-valid');
+    }
+});
+
+lastNameField.addEventListener('input', (event) => {
+    const lastName = event.target.value;
+
+    if (isInvalidLastName(lastName)) {
+        lastNameField.classList.remove('valid');
+        lastNameField.classList.add('invalid');
+        lastNameMessage.textContent = 'At least 4 characters. Only letters.';
+        lastNameMessage.style.visibility = 'visible';
+        lastNameMessage.classList.remove('validation-message-valid');
+    } else {
+        lastNameField.classList.remove('invalid');
+        lastNameField.classList.add('valid');
+        lastNameMessage.textContent = 'Last name is valid!';
+        lastNameMessage.classList.add('validation-message-valid');
+    }
+});
+
+emailField.addEventListener('input', (event) => {
+    const email = event.target.value;
+
+    if (isValidEmail(email)) {
+        emailField.classList.remove('invalid');
+        emailField.classList.add('valid');
+        emailMessage.textContent = 'Email is valid!';
+        emailMessage.classList.add('validation-message-valid');
+    } else {
+        emailField.classList.remove('valid');
+        emailField.classList.add('invalid');
+        emailMessage.textContent = 'Invalid Email!';
+        emailMessage.style.visibility = 'visible';
+        emailMessage.classList.remove('validation-message-valid');
+    }
+});
+
+pswField.addEventListener('input', (event) => {
+    const psw = event.target.value;
+
+    if (isValidPsw(psw)) {
+        pswField.classList.remove('invalid');
+        pswField.classList.add('valid');
+        pswMessage.textContent = 'Password is valid!';
+        pswMessage.classList.add('validation-message-valid');
+    } else {
+        pswField.classList.remove('valid');
+        pswField.classList.add('invalid');
+        pswMessage.textContent = '6 - 20 characters (1 digit, 1 uppercase, 1 lowercase).';
+        pswMessage.style.visibility = 'visible';
+        pswMessage.classList.remove('validation-message-valid');
+    }
+});
+
+pswRepeatField.addEventListener('input', (event) => {
+    const psw = pswField.value;
+    const pswRepeat = event.target.value;
+
+    if (isTheSamePsw(psw, pswRepeat)) {
+        pswRepeatField.classList.remove('invalid');
+        pswRepeatField.classList.add('valid');
+        pswRepeatMessage.textContent = 'Password is valid!';
+        pswRepeatMessage.classList.add('validation-message-valid');
+    } else {
+        pswRepeatField.classList.remove('valid');
+        pswRepeatField.classList.add('invalid');
+        pswRepeatMessage.textContent = 'Password is not the same!';
+        pswRepeatMessage.style.visibility = 'visible';
+        pswRepeatMessage.classList.remove('validation-message-valid');
+    }
+});

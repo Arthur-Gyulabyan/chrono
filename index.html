@@ -251,37 +251,35 @@
 </footer>
 
 <div id="sign-up-modal" class="modal">
-
-  <form class="sign-up-form">
+  <form class="sign-up-form" autocomplete="off">
     <button type="button" class="close"><i class="fal fa-times-circle"></i></button>
 
     <div class="sign-up-form__container">
       <h2 class="sign-up-form__header">Sign Up</h2>
 
-      <label for="first-name">Firstname</label>
+      <label for="first-name">First Name</label>
       <input type="text" placeholder="First Name" id="first-name" class="input-field" required>
-      <span class="validation-message">At least 2 characters. Only letters.</span>
+      <span class="validation-message" id="first-name-message">At least 2 characters. Only letters.</span>
 
-      <label for="last-name">Lastname</label>
+      <label for="last-name">Last Name</label>
       <input type="text" placeholder="Last Name" id="last-name" class="input-field" required>
-      <span class="validation-message">At least 4 characters. Only letters.</span>
-
+      <span class="validation-message" id="last-name-message">At least 4 characters. Only letters.</span>
 
       <label for="email">Email</label>
       <input type="text" placeholder="Email" id="email" class="input-field" required>
-      <span class="validation-message">Invalid email.</span>
+      <span class="validation-message" id="email-message">Invalid email.</span>
 
       <label for="psw">Password</label>
       <input type="password" placeholder="Enter Password" id="psw" class="input-field" required>
-      <span class="validation-message">At least 6 characters (1 digit, 1 letter).</span>
+      <span class="validation-message" id="psw-message">6 - 20 characters (1 digit, 1 uppercase, 1 lowercase).</span>
 
       <label for="psw-repeat">Repeat Password</label>
       <input type="password" placeholder="Repeat Password" id="psw-repeat" class="input-field" required>
-      <span class="validation-message">Password is not the same.</span>
+      <span class="validation-message" id="psw-repeat-message">Password is not the same.</span>
 
-      <label><input type="checkbox" checked="checked" id="remember" style="margin-bottom:15px"> Remember me</label>
+      <label><input type="checkbox" id="remember" class="input-checkbox">Remember me</label>
 
-      <p>I <a href="#">Terms & Privacy</a>.</p>
+      <p class="terms-privacy-text"><a href="#">Terms & Privacy</a></p>
 
       <button type="submit" class="signup-btn">Sign Up</button>
     </div>
