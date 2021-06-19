@@ -1,21 +1,35 @@
-function changeImage() {
-    const landingImg = document.getElementById('landing');
-    if (!landingImg) {
-        return;
-    }
+// Change landing image
+const landingImg = document.querySelectorAll('.landing-img');
+const dots = document.querySelectorAll('.dot');
 
-    let counter = 2;
+const changeImage = (event) => {
+    const dotNumber = event.target.id.slice(event.target.id.length - 1); // Dot's id number
+    const currentImg = document.querySelector('.current-landing'); // Current visible image
+    const activeDot = document.querySelector('.active-dot'); // Current active dot
 
-    setInterval(() => {
-        landingImg.src = `./img/landing/landing${counter++}.jpg`;
+    currentImg.classList.add('prev-landing');
+    currentImg.classList.remove('current-landing');
+    landingImg[dotNumber - 1].classList.add('current-landing');
 
-        if (counter === 6) {
-            counter = 1;
-        }
-    }, 4000);
+    activeDot.classList.remove('active-dot');
+    event.target.classList.add('active-dot'); // Target dot becomes active
+
+    setTimeout(() => {
+        // Class name will be removed when the sliding animation is over.
+        currentImg.classList.remove('prev-landing');
+    }, 500);
+};
+
+dots.forEach(el => {
+    el.addEventListener('click', changeImage);
+});
+
+
+function changeImageInterval() {
+
 }
 
-changeImage();
+changeImageInterval();
 
 // Setting query string as search value
 const searchBtn = document.getElementById('search-btn');
