@@ -85,6 +85,8 @@ const emailField = document.querySelector('#email');
 const emailMessage = document.querySelector('#email-message');
 const pswField = document.querySelector('#psw');
 const pswMessage = document.querySelector('#psw-message');
+const pswRepeatField = document.querySelector('#psw-repeat');
+const pswRepeatMessage = document.querySelector('#psw-repeat-message');
 
 const isInvalidName = (name) => {
     const regEx = /[^a-zA-z]/;
@@ -109,6 +111,10 @@ const isValidPsw = (psw) => {
 
     return psw.match(regEx);
 };
+
+const isTheSamePsw = (psw, pswRepeat) => {
+    return isValidPsw(pswRepeat) && psw === pswRepeat;
+}
 
 firstNameField.addEventListener('input', (event) => {
     const name = event.target.value;
@@ -175,5 +181,23 @@ pswField.addEventListener('input', (event) => {
         pswMessage.textContent = '6 - 20 characters (1 digit, 1 uppercase, 1 lowercase).';
         pswMessage.style.visibility = 'visible';
         pswMessage.classList.remove('validation-message-valid');
+    }
+});
+
+pswRepeatField.addEventListener('input', (event) => {
+    const psw = pswField.value;
+    const pswRepeat = event.target.value;
+
+    if (isTheSamePsw(psw, pswRepeat)) {
+        pswRepeatField.classList.remove('invalid');
+        pswRepeatField.classList.add('valid');
+        pswRepeatMessage.textContent = 'Password is valid!';
+        pswRepeatMessage.classList.add('validation-message-valid');
+    } else {
+        pswRepeatField.classList.remove('valid');
+        pswRepeatField.classList.add('invalid');
+        pswRepeatMessage.textContent = 'Password is not the same!';
+        pswRepeatMessage.style.visibility = 'visible';
+        pswRepeatMessage.classList.remove('validation-message-valid');
     }
 });
