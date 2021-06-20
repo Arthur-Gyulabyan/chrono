@@ -1,101 +1,3 @@
-// Change landing image
-const landingImg = document.querySelectorAll('.landing-img');
-const dots = Array.from(document.querySelectorAll('.dot'));
-
-const changeImage = (event) => {
-    const currentImg = document.querySelector('.current-landing'); // Current visible image
-    const activeDot = document.querySelector('.active-dot'); // Current active dot
-
-    currentImg.classList.add('prev-landing');
-    currentImg.classList.remove('current-landing');
-    landingImg[dots.indexOf(event.target)].classList.add('current-landing');
-
-    activeDot.classList.remove('active-dot');
-    event.target.classList.add('active-dot'); // Target dot becomes active
-
-    setTimeout(() => {
-        // Class name will be removed when the sliding animation is over.
-        currentImg.classList.remove('prev-landing');
-    }, 500);
-};
-
-dots.forEach(el => {
-    el.addEventListener('click', changeImage);
-});
-
-
-function changeImageInterval() {
-    const currentImg = document.querySelector('.current-landing');
-    const activeDot = document.querySelector('.active-dot');
-
-    currentImg.classList.add('prev-landing');
-    currentImg.classList.remove('current-landing');
-
-    if (currentImg.nextElementSibling) {
-        currentImg.nextElementSibling.classList.add('current-landing');
-    } else {
-        // If the current image is the last one.
-        landingImg[0].classList.add('current-landing');
-    }
-
-    activeDot.classList.remove('active-dot');
-
-    if (activeDot.nextElementSibling) {
-        activeDot.nextElementSibling.classList.add('active-dot');
-    } else {
-        // If the active dot is the last one.
-        dots[0].classList.add('active-dot');
-    }
-
-    setTimeout(() => {
-        // Class name will be removed when the sliding animation is over.
-        currentImg.classList.remove('prev-landing');
-    }, 500);
-}
-
-setInterval(() => {
-    changeImageInterval();
-}, 4000);
-
-// Setting query string as search value
-const searchBtn = document.getElementById('search-btn');
-const searchField = document.getElementById('search-input');
-
-function getQuerySearchValue() {
-    const queryString = window.location.search.slice(1);
-    const values = queryString.split('&');
-    let searchValue = '';
-
-    values.forEach(el => {
-        const pair = el.split('=');
-        if (pair[0] === 'search') {
-            searchValue = pair[1];
-        }
-    });
-
-    return searchValue === '' ? null : searchValue;
-}
-
-searchBtn.addEventListener('click', () => {
-    window.location.search = `search=${searchField.value}`;
-});
-
-searchField.addEventListener('keyup', (event) => {
-    if (event.keyCode === 13) {
-        console.log('asd');
-        window.location.search = `search=${searchField.value}`;
-    }
-});
-
-window.addEventListener('load', () => {
-    const searchValue = getQuerySearchValue();
-
-    if (searchValue) {
-        searchField.value = searchValue;
-    }
-});
-
-
 // Sign up modal
 const signUpBtn = document.querySelector('.btn_sign-in');
 const modal = document.getElementById('sign-up-modal');
@@ -114,7 +16,6 @@ window.addEventListener('click', (event) => {
 closeBtn.addEventListener('click', (event) => {
     modal.style.display = 'none';
 });
-
 
 // Sign up form validation
 const firstNameField = document.querySelector('#first-name');
@@ -154,7 +55,7 @@ const isValidPsw = (psw) => {
 
 const isTheSamePsw = (psw, pswRepeat) => {
     return isValidPsw(pswRepeat) && psw === pswRepeat;
-}
+};
 
 firstNameField.addEventListener('input', (event) => {
     const name = event.target.value;
@@ -240,4 +141,57 @@ pswRepeatField.addEventListener('input', (event) => {
         pswRepeatMessage.style.visibility = 'visible';
         pswRepeatMessage.classList.remove('validation-message-valid');
     }
+});
+
+
+// Setting query string as search value
+const searchBtn = document.getElementById('search-btn');
+const searchField = document.getElementById('search-input');
+
+function getQuerySearchValue() {
+    const queryString = window.location.search.slice(1);
+    const values = queryString.split('&');
+    let searchValue = '';
+
+    values.forEach(el => {
+        const pair = el.split('=');
+        if (pair[0] === 'search') {
+            searchValue = pair[1];
+        }
+    });
+
+    return searchValue === '' ? null : searchValue;
+}
+
+searchBtn.addEventListener('click', () => {
+    window.location.search = `search=${searchField.value}`;
+});
+
+searchField.addEventListener('keyup', (event) => {
+    if (event.keyCode === 13) {
+        console.log('asd');
+        window.location.search = `search=${searchField.value}`;
+    }
+});
+
+window.addEventListener('load', () => {
+    const searchValue = getQuerySearchValue();
+
+    if (searchValue) {
+        searchField.value = searchValue;
+    }
+});
+
+
+// Hamburger menu
+const menuButton = document.querySelector('.hamburger-icon');
+const categoriesBar = document.querySelector('.categories-bar');
+const rightNav = document.querySelector('.top-nav__right');
+const dashes = document.querySelectorAll('.hamburger-dash');
+
+menuButton.addEventListener('click', () => {
+    menuButton.classList.toggle('bg-green');
+    categoriesBar.classList.toggle('visible');
+    rightNav.classList.toggle('visible');
+    dashes.forEach(el => el.classList.toggle('black-dash'));
 });
